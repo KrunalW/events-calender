@@ -63,3 +63,7 @@ textarea.form-control{border-radius: 20px;}
 .mbsc-ios.mbsc-scroller-wheel-group {
   padding: 85px;
 }
+.time-slot{max-height: 350px; overflow: hidden; overflow-y: auto;}
+.time-slot .nav{justify-content: space-between;}
+.time-slot .nav li{margin-bottom: 10px; width: 49%; position: relative;}
+.time-slot .nav li .btn-outline-primary{display: block;}
