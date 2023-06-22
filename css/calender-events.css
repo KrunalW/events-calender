@@ -1,0 +1,54 @@
+body {background-color: #f4f4f4; padding: 0; margin: 0; font-family: 'Poppins';}
+h1{font-weight: 700; margin: 50px 0 30px; text-align: center;}
+h3{font-weight: 600; margin: 30px 0 50px; text-align: center; color: #6c6c6c;}
+
+@media (max-width: 920px) {
+    #calendar-wrapper header{text-align: left;}
+    #calendar #navigation-wrapper{right: 10px}
+}
+@media (min-width: 1400px) {
+    .container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl {max-width: 890px;}
+}
+.mbsc-ios.mbsc-scroller-pointer .mbsc-scroller-wheel-item > div, .mbsc-ios.mbsc-datepicker .mbsc-calendar-cell >div:first-child{display: none;}
+
+.mbsc-ios.mbsc-datepicker-inline, .mbsc-ios.mbsc-datepicker .mbsc-calendar, .mbsc-ios.mbsc-scroller-pointer.mbsc-scroller, .mbsc-ios.mbsc-scroller-pointer.mbsc-scroller-inline{border: none; border-radius: 40px; height: auto;}
+.mbsc-ios.mbsc-calendar-cell, .mbsc-ios.mbsc-datepicker .mbsc-calendar-slide, .mbsc-ios.mbsc-datepicker .mbsc-calendar-cell{background: none;}
+.mbsc-ios.mbsc-calendar-controls{padding: 25px;}
+.mbsc-calendar-scroll-wrapper>div>div{margin-bottom: 25px;}
+.mbsc-ios.mbsc-scroller-wheel-line {background: rgb(0 87 255 / 60%); border-radius: 20px;}
+.mbsc-ios.mbsc-scroller-pointer .mbsc-scroller-wheel-item.mbsc-selected{color: #000000;}
+
+.btn{border-radius: 30px; padding: 10px;}
+.mbsc-ios.mbsc-scroller-pointer .mbsc-scroller-wheel-group{padding: 30px;}
+.card{border-radius: 40px;}
+.card-body{padding: 40px;}
+.form-control{border-radius: 40px;}
+textarea.form-control{border-radius: 20px;}
+.btn-xs{padding: 2px 8px;}
+.btn-xs svg{fill: #0d6efd;}
+.btn-xs:hover svg{fill: #FFFFFF;}
+
+.h1 {
+    color: #4db04b;
+    font-weight: 200;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .para {
+    color: #404F5E;
+    font-size:14px;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+.checkmark {
+  color: #4db04b;
+  font-size: 60px;
+  line-height: 80px;
+  margin-left:-15px;
+}
+.icon-box{border-radius:200px;height: 80px;width: 80px;background: #F8FAF5;margin:0 auto;text-align: center;}
+.modal-body{padding: 3rem;}
+.modal-content{border: none; border-radius: 40px;}
+.btn-close{position: absolute;top: 25px;right: 25px;}
