@@ -64,6 +64,7 @@ textarea.form-control{border-radius: 20px;}
   padding: 85px;
 }
 .time-slot{max-height: 350px; overflow: hidden; overflow-y: auto;}
-.time-slot .nav{justify-content: space-between;}
+.time-slot .nav{justify-content: space-between; margin-top: 10px; margin-bottom: 10px;}
 .time-slot .nav li{margin-bottom: 10px; width: 49%; position: relative;}
-.time-slot .nav li .btn-outline-primary{display: block;}
+.time-slot .nav li .btn-outline-primary{display: block;padding: 5px;font-size: 14px;margin-bottom: 5px;}
+.btn-check:disabled+.btn, .btn-check[disabled]+.btn{opacity: .4;}
