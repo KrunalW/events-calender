@@ -1,3 +1,24 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #e3e3e3 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
 body {background-color: #f4f4f4; padding: 0; margin: 0; font-family: 'Poppins';}
 h1{font-weight: 700;text-align: center;font-size: 30px;margin-top: 20px;}
 h3{font-weight: 600;text-align: center;color: #6c6c6c;font-size: 22px;margin-bottom: 30px;}
@@ -13,7 +34,7 @@ h3{font-weight: 600;text-align: center;color: #6c6c6c;font-size: 22px;margin-bot
 .mbsc-ios.mbsc-scroller-pointer .mbsc-scroller-wheel-item > div, .mbsc-ios.mbsc-datepicker .mbsc-calendar-cell >div:first-child{display: none;}
 
 .mbsc-ios.mbsc-datepicker-inline, .mbsc-ios.mbsc-datepicker .mbsc-calendar, .mbsc-ios.mbsc-scroller-pointer.mbsc-scroller, .mbsc-ios.mbsc-scroller-pointer.mbsc-scroller-inline{border: none; border-radius: 40px; height: auto;}
-.mbsc-ios.mbsc-calendar-cell, .mbsc-ios.mbsc-datepicker .mbsc-calendar-slide, .mbsc-ios.mbsc-datepicker .mbsc-calendar-cell{background: none;}
+.mbsc-ios.mbsc-calendar-cell, .mbsc-ios.mbsc-datepicker .mbsc-calendar-cell{background: none;}
 .mbsc-ios.mbsc-calendar-controls{padding: 25px;}
 .mbsc-calendar-scroll-wrapper>div>div{margin-bottom: 25px;}
 .mbsc-ios.mbsc-scroller-wheel-line {background: rgb(0 87 255 / 60%); border-radius: 20px;}
