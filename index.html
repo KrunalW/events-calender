@@ -26,23 +26,35 @@
         <!-- <div id="demo-single-select-time"></div> -->
         <div class="time-slot">
           <ul class="nav">
-            <li><input type="checkbox" class="btn-check" id="btn-check-12-00am" autocomplete="off">
-              <label class="btn btn-outline-primary" for="btn-check-12-00am">12: 00 AM</label>
+            <li>
+              <div class="checkbox">
+                <input type="checkbox" class="btn-check" id="btn-check-12-00am" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btn-check-12-00am">12: 00 AM</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" class="btn-check" id="btn-check-12-30am" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btn-check-12-30am">12: 30 AM</label>
+              </div>
             </li>
-            <li><input type="checkbox" class="btn-check" id="btn-check-12-30am" autocomplete="off">
-              <label class="btn btn-outline-primary" for="btn-check-12-30am">12: 30 AM</label>
+            <li>
+              <div class="checkbox">
+                <input type="checkbox" class="btn-check" id="btn-check-01-00am" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btn-check-01-00am">01: 00 AM</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" class="btn-check" id="btn-check-01-30am" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btn-check-01-30am">01: 30 AM</label>
+              </div>
             </li>
-            <li><input type="checkbox" class="btn-check" id="btn-check-01-00am" autocomplete="off">
-              <label class="btn btn-outline-primary" for="btn-check-01-00am">01: 00 AM</label>
-            </li>
-            <li><input type="checkbox" class="btn-check" id="btn-check-01-30am" autocomplete="off">
-              <label class="btn btn-outline-primary" for="btn-check-01-30am">01: 30 AM</label>
-            </li>
-            <li><input type="checkbox" class="btn-check" id="btn-check-02-00am" autocomplete="off">
-              <label class="btn btn-outline-primary" for="btn-check-02-00am">02: 00 AM</label>
-            </li>
-            <li><input type="checkbox" class="btn-check" id="btn-check-02-30am" autocomplete="off">
-              <label class="btn btn-outline-primary" for="btn-check-02-30am">02: 30 AM</label>
+            <li>
+              <div class="checkbox">
+                <input type="checkbox" class="btn-check" id="btn-check-02-00am" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btn-check-02-00am">02: 00 AM</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" class="btn-check" id="btn-check-02-30am" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btn-check-02-30am">02: 30 AM</label>
+              </div>
             </li>
             <li><input type="checkbox" class="btn-check" id="btn-check-03-00am" autocomplete="off">
               <label class="btn btn-outline-primary" for="btn-check-03-00am">03: 00 AM</label>
@@ -304,6 +316,35 @@
     $("#calendarTime").show();
     $("#formEvent").hide();
   });
+
+  // $(".btn-outline-primary").click(function () {
+  //   if ($(this).prev("input[type=checkbox]").is(':checked')) {
+  //     // alert("111");
+  //     $(".checkbox input[type=checkbox]").each(function () {
+  //       $(this).prop("checked", true);
+  //     }); 
+  //       // $(this).parent().siblings().children(".btn-check").prop("checked", true);
+  //   }
+  // });
+
+
+
+  //   $('#allCheckboxes').find('tr').first().find(':checkbox').on('change', function(e) {
+  //   var $this = $(this),
+  //     idx = $this.closest('td').index();
+  //   $('div[id^="setBttn"]').hide();
+  //   $this.next('div').toggle(this.checked);
+  //   $('[id^="checkAll"]:checked').not(this).prop('checked', !this.checked);
+  //   $('#allCheckboxes').find('tr').not(':first').each(function() {
+  //     $(this).find(':checkbox:checked').prop('checked', !$this.prop('checked'));
+  //     $(this).find('td').eq(idx).find(':checkbox').prop('checked', $this.prop('checked'));
+  //   });
+  // });
+  $('.time-slot').find('li').find(':checkbox').on('change', function (e) {
+    
+    $(this).closest("div").find().children().css("background", "red");
+  });
+
 </script>
 
 
