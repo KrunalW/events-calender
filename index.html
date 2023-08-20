@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-icons.css">
   <link rel="stylesheet" href="css/poppins-fonts.css">
-  <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="css/mobiscroll.javascript.min.css"> -->
 
   <link rel="stylesheet" href="css/calender-events.css">
 </head>
@@ -20,7 +21,24 @@
     <h3>Select a Date and Time to schedule events</h3>
     <div class="row" id="calendarTime">
       <div class="col-sm-8 mb-5">
-        <div id="demo-init-inline"></div>
+        <!-- <div id="demo-init-inline"></div> -->
+        <section class="calendar">
+          <!-- <div class="circle left"></div>
+          <div class="circle right"></div>
+          <div class="rope left"></div>
+          <div class="rope right"></div> -->
+          
+          <!-- <div class="currentDateDisplay">
+            <p id="monthAndDate">Month Day, year</p>
+            <p id="dayOfWeek">Weekday</p>
+          </div> -->
+          
+          <div id="datepicker"></div>
+          <!-- <div class="datepicker-header"></div>
+          <p class="bgText">Test</p> -->
+          
+        </section>
+        
       </div>
       <div class="col-sm-4 mb-5">
         <!-- <div id="demo-single-select-time"></div> -->
@@ -356,29 +374,31 @@
 
 </body>
 
-<script src="js/jquery-3.6.4.min.js.js"></script>
+<!-- <script src="js/jquery-3.6.4.min.js.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/mobiscroll.javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<!-- <script src="js/mobiscroll.javascript.min.js"></script> -->
 <script>
 
-  mobiscroll.setOptions({
-    locale: mobiscroll.localeEn,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
-    theme: 'ios',                 // Specify theme like: theme: 'ios' or omit setting to use default
-    themeVariant: 'light'         // More info about themeVariant: https://docs.mobiscroll.com/5-25-1/javascript/calendar#opt-themeVariant
-  });
+  // mobiscroll.setOptions({
+  //   locale: mobiscroll.localeEn,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+  //   theme: 'ios',                 // Specify theme like: theme: 'ios' or omit setting to use default
+  //   themeVariant: 'light'         // More info about themeVariant: https://docs.mobiscroll.com/5-25-1/javascript/calendar#opt-themeVariant
+  // });
 
-  mobiscroll.datepicker('#demo-one-input', {
-    controls: ['calendar'],       // More info about controls: https://docs.mobiscroll.com/5-25-1/javascript/calendar#opt-controls
-    showRangeLabels: true,
-    display: 'anchored'           // Specify display mode like: display: 'bottom' or omit setting to use default
-  });
+  // mobiscroll.datepicker('#demo-one-input', {
+  //   controls: ['calendar'],       // More info about controls: https://docs.mobiscroll.com/5-25-1/javascript/calendar#opt-controls
+  //   showRangeLabels: true,
+  //   display: 'anchored'           // Specify display mode like: display: 'bottom' or omit setting to use default
+  // });
 
-  mobiscroll.datepicker('#demo-init-inline', {
-    controls: ['calendar'],       // More info about controls: https://docs.mobiscroll.com/5-25-1/javascript/calendar#opt-controls
-    showRangeLabels: true,
-    display: 'inline'             // Specify display mode like: display: 'bottom' or omit setting to use default
-  });
+  // mobiscroll.datepicker('#demo-init-inline', {
+  //   controls: ['calendar'],       // More info about controls: https://docs.mobiscroll.com/5-25-1/javascript/calendar#opt-controls
+  //   showRangeLabels: true,
+  //   display: 'inline'             // Specify display mode like: display: 'bottom' or omit setting to use default
+  // });
 
   // mobiscroll.datepicker('#demo-single-select-time', {
   //   controls: ['time'],
@@ -409,6 +429,38 @@
     }
     $(this).closest(".checkbox").siblings(idx).find(':checkbox').prop('checked', $this.prop('checked'));
   });
+
+
+
+  $("#datepicker").datepicker( {
+  firstDay: 1,
+  // changeMonth: true,
+  // changeYear: true,
+  prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+    nextText: '<i class="fa fa-fw fa-angle-right"></i>',
+  
+  //bg
+  
+  onSelect: function() {
+    var dateText = $.datepicker.formatDate("MM dd, yy", $(this).datepicker("getDate"));
+         $('p.bgText').text(dateText);
+    }
+  
+});
+
+ //getting today's date
+var currentDate = $.datepicker.formatDate('MM dd, yy', new Date());
+
+$('#monthAndDate').text(currentDate);
+
+//setting bgText to current Date
+$('p.bgText').text("Select a date");
+
+var currentWeekday = $.datepicker.formatDate('DD', new Date());
+
+$('#dayOfWeek').text(currentWeekday);
+
+
 </script>
 
 
